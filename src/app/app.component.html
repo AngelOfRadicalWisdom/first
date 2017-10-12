@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
   <div class="row">
@@ -24,29 +25,26 @@
       <button id="listStudents"(click)="listStudents()">
        List addStudents
       </button>
+=======
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        <ul class="nav nav-tabs">
+            <li routerLinkActive="active">
+                <a routerLink="/dataentry">Data Entry</a>
+            </li>
+            <li routerLinkActive="active">
+                  <a routerLink="/datadisplay" >Data Display</a>
+            </li>
+        </ul>
+        </div>
+        <div class="col-md-4"></div> 
+        <router-outlet></router-outlet>
+>>>>>>> 2f4223df857a28db97560a87c0ea7fcfca26df6e
     </div>
-    <div>
-      {{messages}}
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
     </div>
-    <div *ngIf="printing">
-      <table>
-        <thead>
-          <tr>
-            <th> Student Number</th>
-            <th> First Name</th>
-            <th> Last Name</th>
-            <th>Program Enrolled</th>
-            <th> Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let studentRecord of studentCollection">
-            <td>{{studentRecord.studNumber}}</td>
-            <td>{{studentRecord.studFirstName}}</td>
-            <td>{{studentRecord.studLastName}}</td>     
-            <td>{{studentRecord.studProgram}}</td>   
-            <td>{{studentRecord.studYear}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>                                     
+</div>
