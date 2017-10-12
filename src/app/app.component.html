@@ -1,10 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <label>Student Number</label><input type="text"[(ngModel)]="studNo"><br>
-  <label>Student First Name</label><input type="text"[(ngModel)]="studFname"><br>
-    <label>Student Last Name</label><input type="text"[(ngModel)]="studLname"><br>
-      <label>Student Program</label><input type="text"[(ngModel)]="studProg"><br>
-        <label>Student Year</label><input type="text"[(ngModel)]="studYr"><br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-0"
+  <form (ngSubmit)="onSubmit()" #reg
+  <label>Student Number</label>
+  <input type="text" 
+   id="studNo"
+   class="form-comtrol"
+   ngModel 
+   name="studNo"
+   required
+   #stud
+   ><br>
+  <label>Student First Name</label><input type="text" ngModel ="studFname"><br>
+    <label>Student Last Name</label><input type="text" ngModel="studLname"><br>
+      <label>Student Program</label><input type="text" ngModel="studProg"><br>
+        <label>Student Year</label><input type="text" ngModel="studYr"><br>
 </div>
     <div id="options">
       <button id="addStudents"(click)="addStudentEntry()">
